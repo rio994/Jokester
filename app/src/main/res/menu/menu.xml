@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_search_jokes"
+        android:icon="@drawable/ic_baseline_searched_for_24"
+        android:title="@string/get_a_joke"/>
+    <item
+        android:id="@+id/menu_my_jokes"
+        android:icon="@drawable/ic_baseline_format_list_bulleted_24"
+        android:title="@string/my_jokes"/>
+
+
+</menu>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Jokester</string>
+    <string name="the_jokester">The Jokester</string>
+    <string name="get_a_joke">Get a Joke</string>
+    <string name="my_jokes">My Jokes</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
