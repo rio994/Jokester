@@ -22,9 +22,11 @@ class JokesAdapter(private val viewModel : SearchJokesViewModel) : RecyclerView.
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val item = list[position]
+        if(list.isNotEmpty()){
+            val item = list[position]
+            holder.bind(item, position)
+        }
 
-        holder.bind(item, position)
     }
 
     inner class ViewHolder (private val binding : ListItemBinding) : RecyclerView.ViewHolder(binding.root){

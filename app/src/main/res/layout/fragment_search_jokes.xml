@@ -17,30 +17,48 @@
 
         <TextView
             android:id="@+id/new_joke"
+            android:layout_marginTop="100dp"
+            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
             android:text="@{viewModel.isSingleType() ? viewModel.joke.joke : viewModel.joke.setup +'\n'+ viewModel.joke.delivery}"
             app:layout_constraintTop_toTopOf="parent"/>
 
         <Button
             android:id="@+id/button_get_joke"
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:text="Get a joke!"
+            android:layout_marginTop="150dp"
+            android:text="Try me out!"
+            android:padding="20dp"
+            android:textSize="14sp"
             android:onClick="@{()-> viewModel.getAnyJoke()}"
             app:layout_constraintTop_toBottomOf="@id/new_joke"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/button_background"/>
 
         <Button
             android:id="@+id/button_save_joke"
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:padding="20dp"
+            android:textSize="14sp"
+            android:onClick="@{()->viewModel.saveJoke()}"
             app:layout_constraintTop_toBottomOf="@+id/button_get_joke"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:text="save joke!"
-            android:onClick="@{()->viewModel.saveJoke()}"
+            android:text="Add to Favorites!"
+            android:drawableRight="@drawable/ic_favorite_empty_24"
+            android:textColor="@color/button_name"
+            android:elevation="50dp"
+            android:shadowRadius="1"
+            android:animateLayoutChanges="true"
+            android:background="@drawable/button_background"
             />
 
 

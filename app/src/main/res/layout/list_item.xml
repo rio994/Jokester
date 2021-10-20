@@ -24,7 +24,7 @@
             app:layout_constraintEnd_toStartOf="@id/list_item_delete_btn"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="@{item.fullJoke}"
+            android:text="@{item.getFullJoke()}"
             android:textSize="16sp"
             android:layout_width="0dp"/>
         <Button

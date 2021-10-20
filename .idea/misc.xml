@@ -3,9 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/AnteRistovski/AndroidStudioProjects/Jokester/app/src/main/res/drawable/button_background.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/AnteRistovski/AndroidStudioProjects/Jokester/app/src/main/res/drawable/ic_favorite_24.xml" value="0.21794871794871795" />
+        <entry key="..\:/Users/AnteRistovski/AndroidStudioProjects/Jokester/app/src/main/res/drawable/ic_favorite_empty_24.xml" value="0.21794871794871795" />
         <entry key="..\:/Users/AnteRistovski/AndroidStudioProjects/Jokester/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/AnteRistovski/AndroidStudioProjects/Jokester/app/src/main/res/layout/fragment_list.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/AnteRistovski/AndroidStudioProjects/Jokester/app/src/main/res/layout/fragment_search_jokes.xml" value="0.2056159420289855" />
+        <entry key="..\:/Users/AnteRistovski/AndroidStudioProjects/Jokester/app/src/main/res/layout/fragment_search_jokes.xml" value="0.2" />
         <entry key="..\:/Users/AnteRistovski/AndroidStudioProjects/Jokester/app/src/main/res/layout/list_item.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/AnteRistovski/AndroidStudioProjects/Jokester/app/src/main/res/menu/menu.xml" value="0.27239583333333334" />
       </map>

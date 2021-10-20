@@ -43,7 +43,12 @@ class SearchJokesViewModel(private val repository: Repository) : ViewModel() {
 
     fun saveJoke()=viewModelScope.launch(Dispatchers.IO){
         joke.value?.let {
-            repository.saveJoke(it)
+            it.isFavorite = !it.isFavorite
+
+            if(it.isFavorite)
+                repository.saveJoke(it)
+            else
+                repository.deleteJoke(it)
         }
 
     }

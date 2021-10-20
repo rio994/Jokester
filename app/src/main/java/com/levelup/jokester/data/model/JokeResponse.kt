@@ -1,18 +1,37 @@
 package com.levelup.jokester.data.model
 
+import androidx.databinding.BaseObservable
+import androidx.databinding.Bindable
 import androidx.room.Entity
+import androidx.room.Ignore
 import androidx.room.PrimaryKey
+import com.levelup.jokester.BR
 
 @Entity
-data class JokeResponse(@PrimaryKey val id : Int,
-                        val category : String?,
-                        val type : String?,
-                        val joke : String?,
-                        val setup : String?,
-                        val delivery : String?){
+class JokeResponse : BaseObservable(){
 
-    var fullJoke : String? = when(type) {
+    @PrimaryKey
+    var id : Int = -1
+    var category : String? = null
+    var type : String? = null
+    var joke : String? = null
+    var setup : String? = null
+    var delivery : String = ""
+
+    fun getFullJoke()= when(type) {
         "single" -> joke
         else -> setup + delivery
     }
+
+    @Ignore
+    @Bindable
+    var isFavorite : Boolean = false
+        set(value) {
+            if(field != value){
+                field=value
+                notifyPropertyChanged(BR.isFavorite)
+            }
+        }
+
+
 }
