@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/navigation">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/menu_search_jokes">
 
+    <fragment
+        android:id="@+id/menu_search_jokes"
+        android:name="com.levelup.jokester.ui.search.SearchJokesFragment"
+        android:label="fragment_search_jokes"
+        tools:layout="@layout/fragment_search_jokes" />
+    <fragment
+        android:id="@+id/menu_my_jokes"
+        android:name="com.levelup.jokester.ui.list.ListFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list" />
 </navigation>

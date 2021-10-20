@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/AnteRistovski/AndroidStudioProjects/Jokester/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/AnteRistovski/AndroidStudioProjects/Jokester/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/AnteRistovski/AndroidStudioProjects/Jokester/app/src/main/res/layout/fragment_list.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/AnteRistovski/AndroidStudioProjects/Jokester/app/src/main/res/layout/fragment_search_jokes.xml" value="0.2056159420289855" />
+        <entry key="..\:/Users/AnteRistovski/AndroidStudioProjects/Jokester/app/src/main/res/layout/list_item.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/AnteRistovski/AndroidStudioProjects/Jokester/app/src/main/res/menu/menu.xml" value="0.27239583333333334" />
       </map>
     </option>

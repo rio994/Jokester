@@ -43,7 +43,7 @@
         app:layout_constraintBottom_toTopOf="@id/menu"
         android:name="androidx.navigation.fragment.NavHostFragment"
         app:defaultNavHost="true"
-        app:NavGraph="@navigation/navigation"
+        app:navGraph="@navigation/navigation"
         ></fragment>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

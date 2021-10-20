@@ -1,5 +1,6 @@
 package com.levelup.jokester.ui.search
 
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.levelup.jokester.data.model.JokeResponse
@@ -12,16 +13,45 @@ import retrofit2.Response
 
 class SearchJokesViewModel(private val repository: Repository) : ViewModel() {
 
-    fun getAnyJoke() = viewModelScope.launch(Dispatchers.IO) {
-        repository.getAnyJoke().enqueue(object : Callback<JokeResponse>{
-            override fun onResponse(call: Call<JokeResponse>, response: Response<JokeResponse>) {
-                TODO("Not yet implemented")
-            }
+    val singleType =  "single"
+    val joke = MutableLiveData<JokeResponse>()
+    val errorResponse = MutableLiveData<String>()
+    val jokes = repository.getJokes()
 
-            override fun onFailure(call: Call<JokeResponse>, t: Throwable) {
-                TODO("Not yet implemented")
-            }
+    fun getAnyJoke() {
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.getAnyJoke().enqueue(object : Callback<JokeResponse> {
+                override fun onResponse(
+                    call: Call<JokeResponse>,
+                    response: Response<JokeResponse>
+                ) {
+                    if (response.isSuccessful && response.body() != null) {
+                        joke.postValue(response.body())
+                    } else {
+                        errorResponse.postValue(response.errorBody().toString())
+                    }
+                }
 
-        })
+
+                override fun onFailure(call: Call<JokeResponse>, t: Throwable) {
+                    errorResponse.postValue(t.message)
+                }
+
+            })
+        }
     }
+
+    fun saveJoke()=viewModelScope.launch(Dispatchers.IO){
+        joke.value?.let {
+            repository.saveJoke(it)
+        }
+
+    }
+
+
+    fun deleteJoke(joke : JokeResponse) = viewModelScope.launch(Dispatchers.IO) {
+        repository.deleteJoke(joke)
+    }
+
+    fun isSingleType() : Boolean = singleType == joke.value?.type
 }

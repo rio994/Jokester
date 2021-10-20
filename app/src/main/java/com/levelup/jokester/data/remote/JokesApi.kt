@@ -5,6 +5,6 @@ import retrofit2.Call
 import retrofit2.http.GET
 
 interface JokesApi {
-    @GET("/joke/any")
+    @GET("joke/any")
     fun getAnyJoke() : Call<JokeResponse>
 }

@@ -1,7 +1,18 @@
 package com.levelup.jokester.data.model
 
-data class JokeResponse(val category : String,
-                        val type : String,
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity
+data class JokeResponse(@PrimaryKey val id : Int,
+                        val category : String?,
+                        val type : String?,
                         val joke : String?,
                         val setup : String?,
-                        val delivery : String?)
+                        val delivery : String?){
+
+    var fullJoke : String? = when(type) {
+        "single" -> joke
+        else -> setup + delivery
+    }
+}
