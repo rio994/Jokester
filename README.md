@@ -10,3 +10,5 @@ Application is built using:
 - Dependency injection with Koin
 - Retrofit
 - MVVM
+
+Still in process of development...
